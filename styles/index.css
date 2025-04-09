@@ -1,0 +1,43 @@
+/* font: Montserrat-regular: 400 */
+/* font: Montserrat-medium: 500 */
+/* font: Montserrat-semibold: 600 */
+/* font: Montserrat-bold: 700 */
+
+/* Обнуление нужно будет убрать */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+/* Стили контейнера и v-wrapper'a нужно будет убрать */
+
+.v-wrapper {
+    padding: 100px 0;
+
+    @media (max-width: 1200px) {
+        padding: 0;
+    }
+}
+
+.container {
+    max-width: 1630px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@media (max-width: 1600px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+
