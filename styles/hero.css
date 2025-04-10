@@ -100,7 +100,7 @@
     width: 682px;
     height: 682px;
     border-radius: 100%;
-    top: 50%;
+    top: 42%;
     right: 12%;
     transform: translateY(-20%);
     background: radial-gradient(circle, #A5B9FA 20%, transparent 60%);
@@ -139,7 +139,7 @@
     .v-hero__img {
         width: 45%;
         transform: translateY(20%) translateX(-15%);
-        bottom: 0;
+        bottom: calc(147px + (0 - 147) * ((100vw - 1024px) / (1600 - 1024)));
     }
 
     .radial-gradient {
@@ -154,7 +154,7 @@
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
     .v-hero {
         padding-bottom: 50px;
     }
@@ -171,6 +171,7 @@
         left: 50%;
         transform: translateX(-50%) translateY(50px);
         max-height: 80dvh;
+        bottom: 0;
         width: 100%;
         object-fit: contain;
     }

@@ -1,11 +1,11 @@
 .v-steps {
-    padding-bottom: 102px;
+    padding-bottom: 50px;
 
     h2 {
-        font-size: 42px;
+        font-size: 48px;
         color: #38455C;
         text-align: center;
-        margin-bottom: 87px;
+        margin-bottom: 120px;
         font-weight: 600;
     }
 }
@@ -15,11 +15,13 @@
     flex-direction: column;
     gap: 16px;
     width: 100%;
+    max-width: 1454px;
+    margin: auto auto auto 36px;
 }
 
 .v-steps__item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 16px;
 }
 
@@ -36,8 +38,9 @@
 .v-steps__item-text {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 45px;
 }
+
 
 .v-steps__item-title {
     display: flex;
@@ -59,7 +62,7 @@
 .v-steps__item-description {
     display: flex;
     flex-direction: column;
-    max-width: 71%;
+    max-width: 82%;
 }
 
 .v-steps__item-description p {
@@ -67,18 +70,38 @@
     color: #38455C;
     font-weight: 500;
     line-height: 140%;
-    margin: 10px 0;
+    margin: 0 0 33px 0;
+}
+
+.v-steps__item-description .v-steps__item-text-linked {
+    margin-top: 33px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #38455C;
+    min-width: 746px;
+    margin-bottom: 0;
+}
+
+.v-steps__item-text-linked a {
+    color: #B81687;
+    text-decoration: underline;
+}
+
+.v-steps__item-text-linked a:hover {
+    text-decoration: none;
 }
 
 .v-steps__item-description .v-steps__item-hashtag {
     font-weight: 600;
     font-size: 32px;
+    margin-top: -33px;
 }
 
 .v-steps__item-description .v-steps__item-warning {
     font-weight: 400;
     font-size: 14px;
-    margin-top: 95px;
+    margin-top: 57px;
+    min-width: 730px;
 }
 
 .v-steps__item-icon {
@@ -100,8 +123,124 @@
 }
 
 .v-steps__item:nth-child(odd) .v-steps__item-icon {
-    justify-content: flex-start;
+    justify-content: center;
 }
+
+.v-steps__item--1 .v-steps__item-icon img {
+    max-width: 625px;
+    transform: translate(34px, -13px);
+}
+
+.v-steps__item--2 {
+    align-items: center;
+}
+
+.v-steps__item--2 .v-steps__item-icon img {
+    max-width: 455px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    transform: translate(44px, -11px);
+}
+
+.v-steps__item--2 .v-steps__item-text {
+    padding-left: 157px;
+    padding-top: 12px;
+}
+
+.v-steps__item--3 {
+    padding-top: 30px;
+}
+
+.v-steps__item--3 .v-steps__item-icon img {
+    max-width: 441px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    transform: translate(66px, -88px);
+}
+
+.v-steps__item--4 .v-steps__item-icon img {
+    max-width: 529px;
+    width: 100%;
+    transform: translate(13px, -11px);
+}
+
+.v-steps__item--4 {
+    align-items: center;
+    margin-top: -10px;
+}
+
+.v-steps__item--4 .v-steps__item-text {
+    transform: translateX(139px);
+    min-width: 697px;
+}
+
+.v-steps__item--5 .v-steps__item-icon img {
+    max-width: 624px;
+    width: 100%;
+    transform: translate(80px, -59px);
+}
+
+.v-steps__item--5 {
+    margin-top: 77px;
+}
+
+@media (max-width: 1670px) {
+    .v-steps__list {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .v-steps__item--4 .v-steps__item-text {
+        min-width: auto;
+        transform: none;
+    }
+
+    .v-steps__item .v-steps__item-icon img {
+        transform: none;
+    }
+
+    .v-steps__item--2 .v-steps__item-text {
+        transform: none;
+        padding: 0;
+    }
+
+    .v-steps__item-description .v-steps__item-warning {
+        min-width: auto;
+    }
+
+    .v-steps__item--3 .v-steps__item-icon img {
+        aspect-ratio: auto;
+        width: auto;
+    }
+
+    .v-steps__item--3 {
+        align-items: center;
+        padding: 0;
+    }
+
+    .v-steps__item {
+        margin-top: 0;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .v-steps__item-text, .v-steps__item-icon {
+        min-width: calc(50% - 20px);
+        flex-basis: calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+
+    .v-steps__item-description .v-steps__item-text-linked {
+        min-width: auto;
+        font-size: 12px;
+    }
+
+    .v-steps__item-description .v-steps__item-hashtag {
+        margin: 0;
+    }
+}
+
 
 @media (max-width: 1200px) {
     .v-steps {
@@ -212,7 +351,7 @@
     .v-steps__item-icon img {
         max-height: 300px;
         height: 100%;
-        width: auto;
+        width: 100%;
         max-width: 100%;
     }
 }
