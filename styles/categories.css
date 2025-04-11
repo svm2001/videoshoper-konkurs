@@ -389,7 +389,7 @@
     }
 
     .v-categories__item--1 .v-categories__item-description {
-        display: none;
+        margin-top: 14px;
     }
 
     .v-categories__item--2 .gradient {
@@ -452,15 +452,22 @@
     }
 
     .v-categories__item--6 .v-categories__item-description {
-        display: none;
+        margin-top: 14px;
+        font-size: 12px;
     }
 
     .v-categories__text {
         margin-top: 30px;
-        padding-left: 0px;
+        padding-left: 0;
     }
 
     .v-categories__text p {
         font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .v-categories__item--1 .v-categories__item-description {
+        display: none;
     }
 }

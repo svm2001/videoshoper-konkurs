@@ -258,6 +258,16 @@
         gap: 16px;
     }
 
+    .v-prizes__title {
+        display: block;
+        margin-bottom: 36px;
+        margin-top: 36px;
+        font-size: 24px;
+        color: #38455C;
+        text-align: center;
+        font-weight: 600;
+    }
+
     .v-prizes__item {
         flex-basis: 33.33%;
         aspect-ratio: 1/1;
@@ -360,22 +370,31 @@
     }
 }
 
-@media (max-width: 1024px) {
-    .v-prizes__title {
-        display: block;
-        margin-bottom: 36px;
-        margin-top: 36px;
-        font-size: 24px;
-        color: #38455C;
-        text-align: center;
-        font-weight: 600;
-    }
-}
-
 @media (max-width: 800px) {
     .v-prizes__list {
         display: flex;
         flex-direction: column;
+    }
+
+    .v-prizes__item:before {
+        top: 0;
+        left: 0;
+        right: auto;
+        bottom: auto;
+        border-radius: calc(16px + (32 - 16) * ((100vw - 500px) / (800 - 500)));
+        transform: rotate(18deg) translate(-20%, -20%);
+        width: calc(237px + (398 - 237) * ((100vw - 1024px) / (1600 - 1024)));
+        height: calc(237px + (398 - 237) * ((100vw - 1024px) / (1600 - 1024)));
+    }
+
+    .v-prizes__item-number {
+        top: calc(9px + (25 - 9) * ((100vw - 500px) / (800 - 500)));
+        left: calc(6px + (44 - 6) * ((100vw - 500px) / (800 - 500)));;
+        right: auto;
+        bottom: auto;
+        font-size: calc(20px + (42 - 20) * ((100vw - 500px) / (800 - 500)));;
+        flex-direction: column;
+        align-items: center;
     }
 
     .v-prizes__title {
@@ -402,5 +421,28 @@
 
     .v-prizes__item--3 .v-prizes__item-image {
         width: 30%;
+    }
+}
+
+@media (max-width: 500px) {
+    .v-prizes__item:before {
+        top: auto;
+        left: auto;
+        right: 0;
+        bottom: 0;
+        border-radius: 12px 0 0 0;
+        transform: none;
+        width: 100px;
+        height: 40px;
+    }
+
+    .v-prizes__item-number {
+        top: auto;
+        left: auto;
+        right: 12px;
+        bottom: 4px;
+        font-size: 16px;
+        flex-direction: row;
+        align-items: center;
     }
 }
